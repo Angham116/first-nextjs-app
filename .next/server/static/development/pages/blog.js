@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1894,6 +1894,77 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
+/***/ "./pages/blog.js":
+/*!***********************!*\
+  !*** ./pages/blog.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_HOC__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/HOC */ "./pages/components/HOC/index.js");
+/* harmony import */ var _components_common_PostLink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/common/PostLink */ "./pages/components/common/PostLink/index.js");
+var _jsxFileName = "/home/angham/Desktop/first-nextjs-app/pages/blog.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const posts = [{
+  id: 1,
+  title: 'Postt 1',
+  body: 'Tis is post 1'
+}, {
+  id: 2,
+  title: 'Postt 2',
+  body: 'Tis is post 2'
+}, {
+  id: 3,
+  title: 'Postt 3',
+  body: 'Tis is post 3'
+}, {
+  id: 4,
+  title: 'Postt 4',
+  body: 'Tis is post 4'
+}];
+
+const Blog = () => {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: undefined
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }, "Blog Page"), __jsx("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: undefined
+  }, posts.map(post => __jsx(_components_common_PostLink__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    key: post.id,
+    postId: post.id,
+    postTitle: post.title,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: undefined
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_components_HOC__WEBPACK_IMPORTED_MODULE_1__["default"])(Blog));
+
+/***/ }),
+
 /***/ "./pages/components/HOC/index.js":
 /*!***************************************!*\
   !*** ./pages/components/HOC/index.js ***!
@@ -1993,17 +2064,30 @@ const Header = () => {
       lineNumber: 14
     },
     __self: undefined
-  }, "About")));
+  }, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/blog",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, "Blog")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
 
 /***/ }),
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./pages/components/common/PostLink/index.js":
+/*!***************************************************!*\
+  !*** ./pages/components/common/PostLink/index.js ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2011,34 +2095,53 @@ const Header = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_HOC__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/HOC */ "./pages/components/HOC/index.js");
-var _jsxFileName = "/home/angham/Desktop/first-nextjs-app/pages/index.js";
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/home/angham/Desktop/first-nextjs-app/pages/components/common/PostLink/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Index = () => {
-  return __jsx("div", {
+const PostLink = props => {
+  const {
+    postTitle,
+    postId
+  } = props;
+  return __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 6
     },
     __self: undefined
-  }, "Home Page");
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/post/[id]",
+    as: `/post/${postId}`,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, postTitle)));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_components_HOC__WEBPACK_IMPORTED_MODULE_1__["default"])(Index));
+/* harmony default export */ __webpack_exports__["default"] = (PostLink);
 
 /***/ }),
 
-/***/ 3:
-/*!******************************!*\
-  !*** multi ./pages/index.js ***!
-  \******************************/
+/***/ 5:
+/*!*****************************!*\
+  !*** multi ./pages/blog.js ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/angham/Desktop/first-nextjs-app/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /home/angham/Desktop/first-nextjs-app/pages/blog.js */"./pages/blog.js");
 
 
 /***/ }),
@@ -2209,4 +2312,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=blog.js.map
