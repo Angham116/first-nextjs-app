@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1993,7 +1993,20 @@ const Header = () => {
       lineNumber: 14
     },
     __self: undefined
-  }, "About")));
+  }, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/blog",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, "Blog")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -2031,7 +2044,7 @@ const Index = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

@@ -8439,7 +8439,20 @@ var Header = function Header() {
       lineNumber: 14
     },
     __self: this
-  }, "About")));
+  }, "About")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/blog",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, "Blog")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);

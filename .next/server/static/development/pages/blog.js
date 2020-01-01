@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1894,10 +1894,10 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/about.js":
-/*!************************!*\
-  !*** ./pages/about.js ***!
-  \************************/
+/***/ "./pages/blog.js":
+/*!***********************!*\
+  !*** ./pages/blog.js ***!
+  \***********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1905,38 +1905,62 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_common_Title__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/common/Title */ "./pages/components/common/Title/index.js");
-/* harmony import */ var _components_HOC__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/HOC */ "./pages/components/HOC/index.js");
-var _jsxFileName = "/home/angham/Desktop/first-nextjs-app/pages/about.js";
+/* harmony import */ var _components_HOC__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/HOC */ "./pages/components/HOC/index.js");
+/* harmony import */ var _components_common_PostLink__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/common/PostLink */ "./pages/components/common/PostLink/index.js");
+var _jsxFileName = "/home/angham/Desktop/first-nextjs-app/pages/blog.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
+const posts = [{
+  id: 1,
+  title: 'Postt 1',
+  body: 'Tis is post 1'
+}, {
+  id: 2,
+  title: 'Postt 2',
+  body: 'Tis is post 2'
+}, {
+  id: 3,
+  title: 'Postt 3',
+  body: 'Tis is post 3'
+}, {
+  id: 4,
+  title: 'Postt 4',
+  body: 'Tis is post 4'
+}];
 
-const About = () => {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("p", {
+const Blog = () => {
+  return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 29
     },
     __self: undefined
-  }, "About us page"), __jsx(_components_common_Title__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    title: "about us page props title",
+  }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 30
     },
     __self: undefined
-  }, __jsx("h3", {
+  }, "Blog Page"), __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 31
     },
     __self: undefined
-  }, "Sub Titles")));
+  }, posts.map(post => __jsx(_components_common_PostLink__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    key: post.id,
+    postTitle: post.title,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: undefined
+  }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_components_HOC__WEBPACK_IMPORTED_MODULE_2__["default"])(About));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_components_HOC__WEBPACK_IMPORTED_MODULE_1__["default"])(Blog));
 
 /***/ }),
 
@@ -2059,10 +2083,10 @@ const Header = () => {
 
 /***/ }),
 
-/***/ "./pages/components/common/Title/index.js":
-/*!************************************************!*\
-  !*** ./pages/components/common/Title/index.js ***!
-  \************************************************/
+/***/ "./pages/components/common/PostLink/index.js":
+/*!***************************************************!*\
+  !*** ./pages/components/common/PostLink/index.js ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2070,42 +2094,51 @@ const Header = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/home/angham/Desktop/first-nextjs-app/pages/components/common/Title/index.js";
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/home/angham/Desktop/first-nextjs-app/pages/components/common/PostLink/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-const titleStyle = {
-  color: 'red'
-};
 
-const Title = props => {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("p", {
-    style: titleStyle,
+
+const PostLink = props => {
+  const {
+    postTitle
+  } = props;
+  return __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: `/post?title=${postTitle}`,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: undefined
-  }, "page title ", props.title), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: undefined
-  }, props.children));
+  }, postTitle)));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Title);
+/* harmony default export */ __webpack_exports__["default"] = (PostLink);
 
 /***/ }),
 
-/***/ 6:
-/*!******************************!*\
-  !*** multi ./pages/about.js ***!
-  \******************************/
+/***/ 5:
+/*!*****************************!*\
+  !*** multi ./pages/blog.js ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/angham/Desktop/first-nextjs-app/pages/about.js */"./pages/about.js");
+module.exports = __webpack_require__(/*! /home/angham/Desktop/first-nextjs-app/pages/blog.js */"./pages/blog.js");
 
 
 /***/ }),
@@ -2276,4 +2309,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=about.js.map
+//# sourceMappingURL=blog.js.map

@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/about.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/post.js"],{
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
 /*!***********************************************************************!*\
@@ -4601,21 +4601,21 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2Fhome%2Fangham%2FDesktop%2Ffirst-nextjs-app%2Fpages%2Fabout.js!./":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2Fhome%2Fangham%2FDesktop%2Ffirst-nextjs-app%2Fpages%2Fabout.js ***!
-  \**********************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fpost&absolutePagePath=%2Fhome%2Fangham%2FDesktop%2Ffirst-nextjs-app%2Fpages%2Fpost.js!./":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fpost&absolutePagePath=%2Fhome%2Fangham%2FDesktop%2Ffirst-nextjs-app%2Fpages%2Fpost.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/about", function() {
-      var mod = __webpack_require__(/*! ./pages/about.js */ "./pages/about.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/post", function() {
+      var mod = __webpack_require__(/*! ./pages/post.js */ "./pages/post.js")
       if(true) {
-        module.hot.accept(/*! ./pages/about.js */ "./pages/about.js", function() {
-          if(!next.router.components["/about"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/about.js */ "./pages/about.js")
-          next.router.update("/about", updatedPage)
+        module.hot.accept(/*! ./pages/post.js */ "./pages/post.js", function() {
+          if(!next.router.components["/post"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/post.js */ "./pages/post.js")
+          next.router.update("/post", updatedPage)
         })
       }
       return mod
@@ -8338,52 +8338,6 @@ try {
 
 /***/ }),
 
-/***/ "./pages/about.js":
-/*!************************!*\
-  !*** ./pages/about.js ***!
-  \************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_common_Title__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/common/Title */ "./pages/components/common/Title/index.js");
-/* harmony import */ var _components_HOC__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/HOC */ "./pages/components/HOC/index.js");
-var _jsxFileName = "/home/angham/Desktop/first-nextjs-app/pages/about.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-var About = function About() {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, "About us page"), __jsx(_components_common_Title__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    title: "about us page props title",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, __jsx("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, "Sub Titles")));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(_components_HOC__WEBPACK_IMPORTED_MODULE_2__["default"])(About));
-
-/***/ }),
-
 /***/ "./pages/components/HOC/index.js":
 /*!***************************************!*\
   !*** ./pages/components/HOC/index.js ***!
@@ -8505,10 +8459,10 @@ var Header = function Header() {
 
 /***/ }),
 
-/***/ "./pages/components/common/Title/index.js":
-/*!************************************************!*\
-  !*** ./pages/components/common/Title/index.js ***!
-  \************************************************/
+/***/ "./pages/post.js":
+/*!***********************!*\
+  !*** ./pages/post.js ***!
+  \***********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8516,42 +8470,46 @@ var Header = function Header() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/home/angham/Desktop/first-nextjs-app/pages/components/common/Title/index.js";
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_HOC__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/HOC */ "./pages/components/HOC/index.js");
+var _jsxFileName = "/home/angham/Desktop/first-nextjs-app/pages/post.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-var titleStyle = {
-  color: 'red'
-};
 
-var Title = function Title(props) {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("p", {
-    style: titleStyle,
+
+
+var Post = function Post(props) {
+  var router = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["useRouter"])(); // const { post } = props;
+  // const { body } = post;
+
+  return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 10
     },
     __self: this
-  }, "page title ", props.title), __jsx("div", {
+  }, __jsx("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 11
     },
     __self: this
-  }, props.children));
+  }, router.query.title));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Title);
+/* harmony default export */ __webpack_exports__["default"] = (Object(_components_HOC__WEBPACK_IMPORTED_MODULE_2__["default"])(Post));
 
 /***/ }),
 
-/***/ 2:
-/*!**************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=%2Fhome%2Fangham%2FDesktop%2Ffirst-nextjs-app%2Fpages%2Fabout.js ***!
-  \**************************************************************************************************************************************/
+/***/ 1:
+/*!************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fpost&absolutePagePath=%2Fhome%2Fangham%2FDesktop%2Ffirst-nextjs-app%2Fpages%2Fpost.js ***!
+  \************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fabout&absolutePagePath=%2Fhome%2Fangham%2FDesktop%2Ffirst-nextjs-app%2Fpages%2Fabout.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2Fhome%2Fangham%2FDesktop%2Ffirst-nextjs-app%2Fpages%2Fabout.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fpost&absolutePagePath=%2Fhome%2Fangham%2FDesktop%2Ffirst-nextjs-app%2Fpages%2Fpost.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fpost&absolutePagePath=%2Fhome%2Fangham%2FDesktop%2Ffirst-nextjs-app%2Fpages%2Fpost.js!./");
 
 
 /***/ }),
@@ -8567,5 +8525,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=about.js.map
+},[[1,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=post.js.map
