@@ -9,9 +9,9 @@ const postTitleStyle = {
 function Post(){
   const router = useRouter();
   return (
-    <>
+    <div>
       <h4 style={postTitleStyle}>{router.query.title}</h4>
-    </>
+    </div>
   )
 }
 
