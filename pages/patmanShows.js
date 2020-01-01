@@ -49,6 +49,16 @@ const BatmanShows = props => {
           </div>
         </div>)
       })}
+      <style jsx>{`
+         a {
+            text-decoration: none;
+            color: green;
+          }
+
+          a:hover {
+            opacity: 0.6;
+          }
+      `}</style>
     </div>
   )
 
