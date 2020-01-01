@@ -1,10 +1,12 @@
 import Link from 'next/link';
 
 const PostLink = props => {
-  const { postTitle } = props;
+  const { postTitle, postId } = props;
   return (
     <li>
-      <Link href={`/post?title=${postTitle}`}>
+      {/* `href` is the path to post folder (/post/[id])*/}
+      {/* and `as` is the URL to show in url bar of browser */}
+      <Link href="/post/[id]" as={`/post/${postId}`}>
         <a>{postTitle}</a>
       </Link>
     </li>

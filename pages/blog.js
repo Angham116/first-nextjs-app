@@ -29,7 +29,7 @@ const Blog = () => {
     <div>
       <h2>Blog Page</h2>
       <ul>
-        {posts.map(post => <PostLink key={post.id} postTitle={post.title}/>)}
+        {posts.map(post => <PostLink key={post.id} postId={post.id} postTitle={post.title}/>)}
       </ul>
     </div>
   )

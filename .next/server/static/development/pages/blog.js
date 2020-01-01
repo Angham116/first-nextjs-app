@@ -1951,6 +1951,7 @@ const Blog = () => {
     __self: undefined
   }, posts.map(post => __jsx(_components_common_PostLink__WEBPACK_IMPORTED_MODULE_2__["default"], {
     key: post.id,
+    postId: post.id,
     postTitle: post.title,
     __source: {
       fileName: _jsxFileName,
@@ -2103,7 +2104,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const PostLink = props => {
   const {
-    postTitle
+    postTitle,
+    postId
   } = props;
   return __jsx("li", {
     __source: {
@@ -2112,16 +2114,17 @@ const PostLink = props => {
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: `/post?title=${postTitle}`,
+    href: "/post/[id]",
+    as: `/post/${postId}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 9
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 10
     },
     __self: undefined
   }, postTitle)));

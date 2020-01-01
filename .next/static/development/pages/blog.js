@@ -8396,6 +8396,7 @@ var Blog = function Blog() {
   }, posts.map(function (post) {
     return __jsx(_components_common_PostLink__WEBPACK_IMPORTED_MODULE_2__["default"], {
       key: post.id,
+      postId: post.id,
       postTitle: post.title,
       __source: {
         fileName: _jsxFileName,
@@ -8550,7 +8551,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var PostLink = function PostLink(props) {
-  var postTitle = props.postTitle;
+  var postTitle = props.postTitle,
+      postId = props.postId;
   return __jsx("li", {
     __source: {
       fileName: _jsxFileName,
@@ -8558,16 +8560,17 @@ var PostLink = function PostLink(props) {
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/post?title=".concat(postTitle),
+    href: "/post/[id]",
+    as: "/post/".concat(postId),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 9
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 10
     },
     __self: this
   }, postTitle)));
